@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  iris:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 1981:1972
+      - 55037:52773
+      - 53773
+    volumes:
+      - ./:/home/irisowner/dev
