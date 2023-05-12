@@ -1,4 +1,4 @@
-Class demo.democlass
+Class shvarov.demo.democlass
 {
 
 /// Hello World
@@ -6,7 +6,7 @@ ClassMethod HelloWorld() As %Status
 {
         Set sc = $$$OK
         // do something
-        write "Hello World"
+        write "Hello World !"
         Return sc
 }
 

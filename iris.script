@@ -2,7 +2,19 @@
  zn "%SYS"
  Do ##class(Security.Users).UnExpireUserPasswords("*")
 
- do $System.OBJ.LoadDir("/home/irisowner/dev/src","ck",,1)
+ ; enabling callin for Embedded Python
+    do ##class(Security.Services).Get("%Service_CallIn",.prop)
+    set prop("Enabled")=1
+    set prop("AutheEnabled")=48
+    do ##class(Security.Services).Modify("%Service_CallIn",.prop)
+
+
+ ;do $System.OBJ.LoadDir("/home/irisowner/dev/src","ck",,1)
+ ;
+ ;
+
+ zn "USER"
+ zpm "load /home/irisowner/dev/"
 
  halt
 
